@@ -1,9 +1,8 @@
 package com.arjuna.jekardahfight.Model;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
 
-@Generated("com.robohorse.robopojogenerator")
+
 public class DataItem{
 
 	@SerializedName("nama")

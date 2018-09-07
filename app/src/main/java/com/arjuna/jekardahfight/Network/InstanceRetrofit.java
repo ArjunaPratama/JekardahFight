@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class InstanceRetrofit {
-    public static  final  String url = "http://api.jakarta.go.id/v1/emergency/petugaspemadam";
+    public static  final  String url = "http://api.jakarta.go.id/v1/emergency/";
     public static Retrofit setInit(){
         return new Retrofit.Builder()
                 .baseUrl(url)
