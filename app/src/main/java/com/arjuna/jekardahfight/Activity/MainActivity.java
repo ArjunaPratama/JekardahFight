@@ -80,8 +80,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onBindViewHolder(MyViewHolder holder, int position) {
+        public void onBindViewHolder(MyViewHolder holder, final int position) {
             holder.petugasnya.setText(dataItems.get(position).getNama());
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    context.startActivity(new Intent(context, DetailActivity.class)
+                    .putExtra("nama", dataItems.get(position).getNama())
+                    .putExtra("phone", dataItems.get(position).getPhone())
+                    .putExtra("wilayah", dataItems.get(position).getWilayah())
+                    .putExtra("alamat", dataItems.get(position).getAlamat())
+                    .putExtra("jabatan", dataItems.get(position).getJabatan())
+                    .putExtra("login", dataItems.get(position).getLoginTerakhir()));
+
+                }
+            });
 
         }
 
